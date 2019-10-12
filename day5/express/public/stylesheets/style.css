@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #00B7FF;
+header{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+.weui-tabbar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
