@@ -11,9 +11,10 @@
         </div>
         <!-- BEGIN actionSheet -->
         <div>
-            <div v-show="bool" @click="closeFocus" class="weui-mask" id="iosMask" style="display: none；position: relative;">
+            <div v-show="bool" @click="closeFocus" class="weui-mask" id="iosMask"
+                style="display: none;">
                 <div v-show="bool" class="{bool?'weui-actionsheet weui-actionsheet_toggle':'weui-actionsheet'}"
-                    id="iosActionsheet" style="position: absolute;bottom: 0px;width: 100%;">
+                    id="iosActionsheet" style="position: absolute;width: 100%;bottom: 0px;">
                     <div class="weui-actionsheet__title">
                         <p class="weui-actionsheet__title-text">这是一个标题，可以为一行或者两行。</p>
                     </div>
@@ -29,7 +30,7 @@
             </div>
         </div>
 
-        <div v-show="azBool" class="weui-skin_android" id="androidActionsheet" style="display: none">
+        <div v-show="azBool" class="weui-skin_android" id="androidActionsheet" style="display: none;">
             <div @click="closeaz" class="weui-mask"></div>
             <div class="weui-actionsheet">
                 <div class="weui-actionsheet__menu">
