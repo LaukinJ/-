@@ -516,7 +516,7 @@ eval("var content = __webpack_require__(/*! !../../../_css-loader@3.2.0@css-load
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-header', {\n  data: function data() {\n    return {\n      title: \"今日头条\"\n    };\n  },\n  template: \"\\n    <header>{{title}}</header>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-header', {\n  props: {\n    color: String\n  },\n  // M\n  data: function data() {\n    return {\n      title: \"今日头条\"\n    };\n  },\n  // V\n  template: \"\\n        <header :style=\\\"{\\n            backgroundColor: color\\n        }\\\">\\n            <slot></slot>\\n        </header>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
 
 /***/ }),
 
@@ -585,7 +585,7 @@ eval("module.exports = \"<div class=\\\"weui-tabbar\\\">\\r\\n    <a v-for=\\\"(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _tabbar_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar.html */ \"./src/components/tabbar/tabbar.html\");\n/* harmony import */ var _tabbar_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tabbar_html__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/icon_tabbar.png */ \"./src/images/icon_tabbar.png\");\n/* harmony import */ var _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-tabbar', {\n  data: function data() {\n    return {\n      icon: _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2___default.a,\n      tabbar: [{\n        title: '微信',\n        url: '/wechat',\n        badge: 8,\n        dot: false\n      }, {\n        title: '通讯录',\n        url: '/contact',\n        badge: 0,\n        dot: false\n      }, {\n        title: '发现',\n        url: '/recover',\n        badge: 0,\n        dot: true\n      }, {\n        title: '我',\n        url: '/mine',\n        badge: 0,\n        dot: false\n      }],\n      // 控制高亮\n      offset: 0\n    };\n  },\n  template: _tabbar_html__WEBPACK_IMPORTED_MODULE_1___default.a,\n  methods: {\n    highLight: function highLight(index) {\n      this.offset = index;\n      console.log(index);\n    }\n  }\n}));\n\n//# sourceURL=webpack:///./src/components/tabbar/tabbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _tabbar_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabbar.html */ \"./src/components/tabbar/tabbar.html\");\n/* harmony import */ var _tabbar_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tabbar_html__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/icon_tabbar.png */ \"./src/images/icon_tabbar.png\");\n/* harmony import */ var _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _tools_observer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../tools/observer */ \"./src/tools/observer.js\");\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-tabbar', {\n  data: function data() {\n    return {\n      icon: _images_icon_tabbar_png__WEBPACK_IMPORTED_MODULE_2___default.a,\n      tabbar: [{\n        title: '微信',\n        url: '/wechat',\n        badge: 8,\n        dot: false\n      }, {\n        title: '通讯录',\n        url: '/contact',\n        badge: 0,\n        dot: false\n      }, {\n        title: '发现',\n        url: '/recover',\n        badge: 0,\n        dot: true\n      }, {\n        title: '我',\n        url: '/mine',\n        badge: 0,\n        dot: false\n      }],\n      // 控制高亮\n      offset: 0\n    };\n  },\n  template: _tabbar_html__WEBPACK_IMPORTED_MODULE_1___default.a,\n  methods: {\n    highLight: function highLight(index) {\n      this.offset = index;\n      _tools_observer__WEBPACK_IMPORTED_MODULE_3__[\"default\"].emit('setTabbar', index);\n      console.log(index);\n    }\n  }\n}));\n\n//# sourceURL=webpack:///./src/components/tabbar/tabbar.js?");
 
 /***/ }),
 
@@ -608,7 +608,67 @@ eval("module.exports = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2C
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var weui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! weui */ \"./node_modules/_weui@2.1.3@weui/dist/style/weui.css\");\n/* harmony import */ var weui__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(weui__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/header/header */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/search */ \"./src/components/search/search.js\");\n/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/panel/panel */ \"./src/components/panel/panel.js\");\n/* harmony import */ var _components_tabbar_tabbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabbar/tabbar */ \"./src/components/tabbar/tabbar.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\nnew vue_dist_vue__WEBPACK_IMPORTED_MODULE_6___default.a({\n  el: '#app'\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var weui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! weui */ \"./node_modules/_weui@2.1.3@weui/dist/style/weui.css\");\n/* harmony import */ var weui__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(weui__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/header/header */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/search */ \"./src/components/search/search.js\");\n/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/panel/panel */ \"./src/components/panel/panel.js\");\n/* harmony import */ var _components_tabbar_tabbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabbar/tabbar */ \"./src/components/tabbar/tabbar.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _pages_wechat_wechat__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/wechat/wechat */ \"./src/pages/wechat/wechat.js\");\n/* harmony import */ var _pages_contact_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/contact/contact */ \"./src/pages/contact/contact.js\");\n/* harmony import */ var _pages_main_main__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/main/main */ \"./src/pages/main/main.js\");\n/* harmony import */ var _pages_recover_recover__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/recover/recover */ \"./src/pages/recover/recover.js\");\n/* harmony import */ var _pages_mine_mine__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/mine/mine */ \"./src/pages/mine/mine.js\");\n\n\n\n\n\n\n\n\n\n\n\n\nnew vue_dist_vue__WEBPACK_IMPORTED_MODULE_6___default.a({\n  el: '#app',\n  template: \"\\n        <div>\\n            <eno-main></eno-main>\\n            <eno-tabbar></eno-tabbar>\\n        </div>\\n    \"\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/contact/contact.js":
+/*!**************************************!*\
+  !*** ./src/pages/contact/contact.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-contact', {\n  template: \"\\n        <div>\\n            <eno-header color=\\\"red\\\">\\u901A\\u8BAF\\u5F55</eno-header>\\n            \\u901A\\u8BAF\\u5F55\\n        </div>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/pages/contact/contact.js?");
+
+/***/ }),
+
+/***/ "./src/pages/main/main.js":
+/*!********************************!*\
+  !*** ./src/pages/main/main.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _tools_observer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../tools/observer */ \"./src/tools/observer.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-main', {\n  data: function data() {\n    return {\n      tabbar: 'eno-wechat'\n    };\n  },\n  template: \"\\n        <div>\\n            <keep-alive>\\n                <component :is=\\\"tabbar\\\"></component>\\n            </keep-alive>\\n        </div>\\n    \",\n  mounted: function mounted() {\n    var _this = this;\n\n    _tools_observer__WEBPACK_IMPORTED_MODULE_1__[\"default\"].on('setTabbar', function (index) {\n      switch (index) {\n        case 0:\n          _this.tabbar = 'eno-wechat';\n          break;\n\n        case 1:\n          _this.tabbar = 'eno-contact';\n          break;\n\n        case 2:\n          _this.tabbar = 'eno-recover';\n          break;\n\n        case 3:\n          _this.tabbar = 'eno-mine';\n          break;\n      }\n    });\n  }\n}));\n\n//# sourceURL=webpack:///./src/pages/main/main.js?");
+
+/***/ }),
+
+/***/ "./src/pages/mine/mine.js":
+/*!********************************!*\
+  !*** ./src/pages/mine/mine.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-mine', {\n  template: \"\\n        <div>\\n            <eno-header color=\\\"pink\\\">\\u6211</eno-header>\\n            \\u6211\\n        </div>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/pages/mine/mine.js?");
+
+/***/ }),
+
+/***/ "./src/pages/recover/recover.js":
+/*!**************************************!*\
+  !*** ./src/pages/recover/recover.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-recover', {\n  template: \"\\n        <div>\\n            <eno-header color=\\\"yellow\\\">\\u53D1\\u73B0</eno-header>\\n            \\u53D1\\u73B0\\n        </div>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/pages/recover/recover.js?");
+
+/***/ }),
+
+/***/ "./src/pages/wechat/wechat.js":
+/*!************************************!*\
+  !*** ./src/pages/wechat/wechat.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/_vue@2.6.10@vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('eno-wechat', {\n  template: \"\\n        <div>\\n            <eno-header color=\\\"green\\\">\\u5FAE\\u4FE1</eno-header>\\n            <eno-search></eno-search>\\n            <eno-panel></eno-panel>\\n        </div>\\n    \"\n}));\n\n//# sourceURL=webpack:///./src/pages/wechat/wechat.js?");
 
 /***/ }),
 

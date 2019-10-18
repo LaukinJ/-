@@ -1,6 +1,7 @@
 import Vue from 'vue/dist/vue'
 import template from './tabbar.html'
 import icon from '../../images/icon_tabbar.png'
+import observer from '../../tools/observer'
 export default Vue.component('eno-tabbar', {
     data() {
         return {
@@ -34,6 +35,7 @@ export default Vue.component('eno-tabbar', {
     methods: {
         highLight(index) {
             this.offset = index
+            observer.emit('setTabbar',index)
             console.log(index)
         }
     }
