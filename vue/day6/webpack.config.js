@@ -67,6 +67,7 @@ module.exports = {
             }
         ]
     },
+    watch: true,
     // webpack本身没有的，额外增加的东西就叫插件
     plugins: [
         new VueLoaderPlugin(),
@@ -74,5 +75,10 @@ module.exports = {
             template: './src/index.html'
         })
         // new HtmlWebpackPlugin()
-    ]
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
+    }
 };
