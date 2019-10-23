@@ -35,7 +35,7 @@
 
 <script>
 import axios from "axios";
-import observer from "../../tools/observer";
+import observer from "../../tools/observer.js";
 export default {
   props: {
     tab: String
