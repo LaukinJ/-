@@ -1,7 +1,7 @@
 <template name="component-name">
   <div class="weui-panel weui-panel_access">
     <div class="weui-panel__bd">
-      <router-link
+      <a
         v-for="(item,index) in newsComputed"
         :key="index"
         class="weui-media-box weui-media-box_appmsg"
@@ -15,14 +15,14 @@
           }
         }"
       >
-        <div class="weui-media-box__hd">
+        <div @click="showGallery(item.author.avatar_url)" class="weui-media-box__hd">
           <img class="weui-media-box__thumb" :src="item.author.avatar_url" alt />
         </div>
-        <div class="weui-media-box__bd">
+        <div @click="navToDetail(index)" class="weui-media-box__bd">
           <h4 class="weui-media-box__title" v-text="item.title"></h4>
           <p class="weui-media-box__desc" v-text="item.author.loginname"></p>
         </div>
-      </router-link>
+      </a>
     </div>
     <div @click="getNews" class="weui-panel__ft">
       <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
@@ -36,6 +36,7 @@
 <script>
 import axios from "axios";
 import observer from "../../tools/observer.js";
+import { mapActions } from "vuex";
 export default {
   props: {
     tab: String
@@ -48,6 +49,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["setGalleryStatus"]),
     getNews() {
       let _self = this;
       axios
@@ -66,6 +68,24 @@ export default {
           _self.news = [..._self.news, ...data.data.data];
           // console.log(data)
         });
+    },
+    navToDetail(index) {
+      this.$router.push({
+        name: "detail",
+        params: {
+          id: index
+        },
+        query: {
+          name: "yao"
+        }
+      });
+    },
+    showGallery(imgUrl) {
+      this.setGalleryStatus({
+        imgUrl,
+        isShow: true
+      });
+      console.log(imgUrl);
     }
   },
   computed: {
